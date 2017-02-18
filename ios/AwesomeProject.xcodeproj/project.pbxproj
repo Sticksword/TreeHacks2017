@@ -1039,7 +1039,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.TreeHaxAwesomeProject;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.TreeHaxProject;
 				PRODUCT_NAME = AwesomeProject;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -1058,7 +1058,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.TreeHaxAwesomeProject;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.TreeHaxProject;
 				PRODUCT_NAME = AwesomeProject;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
