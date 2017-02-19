@@ -9,6 +9,7 @@ import {
   TextInput,
   TouchableHighlight,
 } from 'react-native';
+import { OverlayComponent } from './OverlayComponent';
 
 export default class AwesomeProject extends Component {
   constructor(props) {
@@ -22,6 +23,9 @@ export default class AwesomeProject extends Component {
         ref="cam"
         style={styles.container}
         type={this.state.cameraType}>
+        <View style={styles.overlayBar}>
+          <OverlayComponent />
+        </View>
         <View style={styles.buttonBar}>
           <TouchableHighlight style={styles.button} onPress={this._switchCamera.bind(this)}>
             <Text style={styles.buttonText}>Flip</Text>
