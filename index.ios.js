@@ -23,10 +23,10 @@ export default class AwesomeProject extends Component {
         style={styles.container}
         type={this.state.cameraType}>
         <View style={styles.buttonBar}>
-          <TouchableHighlight style={styles.button} onPress={this._switchCamera}>
+          <TouchableHighlight style={styles.button} onPress={this._switchCamera.bind(this)}>
             <Text style={styles.buttonText}>Flip</Text>
           </TouchableHighlight>
-          <TouchableHighlight style={styles.button} onPress={this._takePicture}>
+          <TouchableHighlight style={styles.button} onPress={this._takePicture.bind(this)}>
             <Text style={styles.buttonText}>Take</Text>
           </TouchableHighlight>
         </View>
@@ -36,11 +36,13 @@ export default class AwesomeProject extends Component {
 
   _switchCamera() {
     var state = this.state;
+    console.log(this.state);
     state.cameraType = state.cameraType === Camera.constants.Type.back ? Camera.constants.Type.front : Camera.constants.Type.back;
     this.setState(state);
   }
 
   _takePicture() {
+    console.log(this.refs);
     this.refs.cam.capture(function(err, data) {
       console.log(err, data);
     });
